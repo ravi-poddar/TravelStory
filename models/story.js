@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 
 //Story Schema - name,image,description
-var storySchema = new mongoose.Schema({
+const storySchema = new mongoose.Schema({
     name : String,
     image : String,
     description : String,
