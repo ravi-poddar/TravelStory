@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const storySchema = new mongoose.Schema({
     name : String,
     image : String,
+    country: String,
     description : String,
     author : {
         id: {
