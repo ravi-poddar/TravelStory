@@ -30,7 +30,7 @@ middlewareObj.checkStoryOwnership=(req,res,next)=>{
     }
 }
 
-middlewareObj.checkCommentOwnership=function(req,res,next){
+middlewareObj.checkCommentOwnership=(req,res,next)=>{
     //is user logged in?
     if(req.isAuthenticated()){
         Comment.findById(req.params.comment_id,function(err,foundComment){
@@ -57,7 +57,7 @@ middlewareObj.checkCommentOwnership=function(req,res,next){
     }
 }
 
-middlewareObj.isLoggedIn=function(req,res,next){
+middlewareObj.isLoggedIn=(req,res,next)=>{
     if(req.isAuthenticated()){
         return next();
     }
