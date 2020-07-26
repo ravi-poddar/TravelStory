@@ -1,0 +1,26 @@
+<%- include("../partials/header") %>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome To Travel Story</h1>
+            <p>Collecton of stories from all over the world.</p>
+            <a class="btn btn-primary btn-lg" href="/stories/new">Add new story</a>
+        </div>
+    </header>
+    <div class="row">
+        <% stories.forEach(function(story){ %>
+            <div class="col-md-3 col-sm-6" style="display:flex; flex-wrap: wrap;">
+                <div class="thumbnail text-center">
+                    <img src="<%= story.image %>" style="height:220px;">
+                    <div class="caption ">
+                        <h4><b><%= story.name %></b></h4>
+                    </div>
+                    <p><a class="btn btn-primary" href="/stories/<%= story._id %>">More Info</a></p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+        
+</div>
+<%- include("../partials/footer") %>
+
